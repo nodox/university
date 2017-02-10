@@ -1,9 +1,11 @@
 {
-  "name": "demo-app",
+  "name": "university-app",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "karma": "./node_modules/.bin/karma start --auto-watch",
+    "cclimate": "./node_modules/.bin/codeclimate-test-reporter"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -13,5 +15,14 @@
     "express": "~4.14.1",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0"
   }
 }
