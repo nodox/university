@@ -3,7 +3,7 @@ let chaiHttp = require('chai-http');
 let should = chai.should();
 
 // Our app server
-let server = require('../../src/app');
+let server = require('../../server/app');
 
 // Configuration
 chai.use(chaiHttp);
