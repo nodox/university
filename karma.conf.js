@@ -16,7 +16,11 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'dist/*.js',
+<<<<<<< HEAD
       'test/client/*.spec.js'
+=======
+      'test/*.spec.js'
+>>>>>>> b8f5f1309f1d84fe1a7ddcc76340d42800b4fa13
     ],
 
 
@@ -43,6 +47,7 @@ module.exports = function(config) {
 
     // optionally, configure the reporter
     coverageReporter: {
+<<<<<<< HEAD
 
       // specify a common output directory
       dir : 'coverage/',
@@ -51,6 +56,10 @@ module.exports = function(config) {
       ]
 
 
+=======
+      type : 'lcovonly',
+      dir : 'coverage/'
+>>>>>>> b8f5f1309f1d84fe1a7ddcc76340d42800b4fa13
     },
 
 
