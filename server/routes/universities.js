@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
       if (err)
        { console.error(err); res.send("Error " + err); }
       else
-       { res.send(result.rows); }
+       { res.json(result.rows); }
     });
   });
 });
