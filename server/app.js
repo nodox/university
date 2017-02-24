@@ -26,6 +26,11 @@ app.use(express.static(path.join(__dirname, '../dist')));
 app.use('/', index);
 app.use('/users', users);
 
+app.use('*', (req, res) => {
+  // Use res.sendfile, as it streams instead of reading the file into memory.
+  res.sendFile(__dirname + '/../dist/index.html');
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -44,5 +49,7 @@ app.use((err, req, res) => {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
