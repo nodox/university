@@ -10,8 +10,8 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const courses = require('./routes/courses');
 const universities = require('./routes/universities');
-const university_queries = require('./routes/university_queries');
-const course_queries = require('./routes/course_queries');
+const university_queries = require('./routes/university-queries');
+const course_queries = require('./routes/course-queries');
 
 const app = express();
 
@@ -31,7 +31,6 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/universities', universities);
 app.use('/courses', courses);
-// app.use('/universities', university_id);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
