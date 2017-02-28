@@ -8,7 +8,10 @@ const bodyParser = require('body-parser');
 //const pg = require('pg');
 const index = require('./routes/index');
 const users = require('./routes/users');
+const courses = require('./routes/courses');
 const universities = require('./routes/universities');
+const university_queries = require('./routes/university_queries');
+const course_queries = require('./routes/course_queries');
 
 const app = express();
 
@@ -27,6 +30,8 @@ app.use(express.static(path.join(__dirname, '../dist')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/universities', universities);
+app.use('/courses', courses);
+// app.use('/universities', university_id);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

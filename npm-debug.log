@@ -1,33 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
-2 info using npm@3.10.10
-3 info using node@v6.9.5
+1 verbose cli [ '/usr/local/Cellar/node/7.5.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@4.1.2
+3 info using node@v7.5.0
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle university-app@0.0.0-semantically-release~prestart: university-app@0.0.0-semantically-release
 6 silly lifecycle university-app@0.0.0-semantically-release~prestart: no script for prestart, continuing
 7 info lifecycle university-app@0.0.0-semantically-release~start: university-app@0.0.0-semantically-release
 8 verbose lifecycle university-app@0.0.0-semantically-release~start: unsafe-perm in lifecycle true
-9 verbose lifecycle university-app@0.0.0-semantically-release~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/carter/Desktop/437/university/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle university-app@0.0.0-semantically-release~start: CWD: /home/carter/Desktop/437/university
+9 verbose lifecycle university-app@0.0.0-semantically-release~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Corey/Desktop/CSE 437/university/node_modules/.bin:/Users/Corey/.rvm/gems/ruby-2.0.0-p643/bin:/Users/Corey/.rvm/gems/ruby-2.0.0-p643@global/bin:/Users/Corey/.rvm/rubies/ruby-2.0.0-p643/bin:/Users/Corey/torch/install/bin:/Users/Corey/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/Corey/.rvm/bin
+10 verbose lifecycle university-app@0.0.0-semantically-release~start: CWD: /Users/Corey/Desktop/CSE 437/university
 11 silly lifecycle university-app@0.0.0-semantically-release~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle university-app@0.0.0-semantically-release~start: Returned: code: 1  signal: null
 13 info lifecycle university-app@0.0.0-semantically-release~start: Failed to exec start script
 14 verbose stack Error: university-app@0.0.0-semantically-release start: `node ./bin/www`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at EventEmitter.emit (events.js:192:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at ChildProcess.emit (events.js:192:7)
+14 verbose stack     at maybeClose (internal/child_process.js:890:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid university-app@0.0.0-semantically-release
-16 verbose cwd /home/carter/Desktop/437/university
-17 error Linux 4.4.0-62-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
-19 error node v6.9.5
-20 error npm  v3.10.10
+16 verbose cwd /Users/Corey/Desktop/CSE 437/university
+17 error Darwin 14.5.0
+18 error argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "start"
+19 error node v7.5.0
+20 error npm  v4.1.2
 21 error code ELIFECYCLE
 22 error university-app@0.0.0-semantically-release start: `node ./bin/www`
 22 error Exit status 1
