@@ -3,7 +3,7 @@
   "version": "0.0.0-semantically-release",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "node .bin/www",
     "cclimate": "./node_modules/.bin/codeclimate-test-reporter",
     "mocha": "./node_modules/.bin/mocha",
     "init-cz": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
