@@ -3,12 +3,11 @@
   "version": "0.0.0-semantically-release",
   "private": true,
   "scripts": {
-    "start": "node .bin/www",
+    "start": "node node_modules/gulp/bin/gulp serve",
     "cclimate": "./node_modules/.bin/codeclimate-test-reporter",
     "mocha": "./node_modules/.bin/mocha",
     "init-cz": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
-    "commit": "git-cz",
-    "build": "gulp"
+    "commit": "git-cz"
   },
   "config": {
     "commitizen": {
