@@ -8,7 +8,7 @@
     "mocha": "./node_modules/.bin/mocha",
     "init-cz": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
     "commit": "git-cz",
-    "postinstall": "gulp default"
+    "postinstall": "gulp serve"
 
   },
   "config": {
