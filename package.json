@@ -7,7 +7,8 @@
     "cclimate": "./node_modules/.bin/codeclimate-test-reporter",
     "mocha": "./node_modules/.bin/mocha",
     "init-cz": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "postinstall": "bower install"
   },
   "engines": {
     "node": "6.9.x"
