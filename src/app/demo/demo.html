@@ -1,12 +1,9 @@
 <div class="container">
+  <p>GET /courses</p>
+    <form ng-submit="demo.getData()" novalidate>
 
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Run</button>
+  </form> 
 
-
-
-  <div class="jumbotron text-center">
-    <span>Request: </span> <input type="text" name="demo_request" id="demo_request">
-  </div>
-
-  <div class="row"></div>
-
+  <p ng-model="demo.data">{{ demo.data }}</p>
 </div>
