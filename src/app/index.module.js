@@ -23,8 +23,8 @@ angular.module('universityClient', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSani
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
   .controller('MainController', MainController)
-  .controller('DocsController', MainController)
-  .controller('TutorialController', MainController)
-  .controller('DemoController', MainController)
+  .controller('DocsController', DocsController)
+  .controller('TutorialController', TutorialController)
+  .controller('DemoController', DemoController)
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);
