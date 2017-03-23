@@ -7,7 +7,7 @@
     "cclimate": "./node_modules/.bin/codeclimate-test-reporter",
     "mocha": "./node_modules/.bin/mocha",
     "init-cz": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
-    "commit": "git-cz" 
+    "commit": "git-cz"
   },
   "engines": {
     "node": "6.9.x"
@@ -24,8 +24,9 @@
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.2",
-    "pg": "4.x"
+    "pg": "4.x",
+    "sequelize": "^3.30.2",
+    "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
     "babel-core": "~6.7.4",
