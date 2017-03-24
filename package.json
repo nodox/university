@@ -24,8 +24,10 @@
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "morgan": "~1.7.0",
-    "pg": "4.x",
+    "pg": "^4.5.6",
+    "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.2",
+    "sequelize-cli": "^2.6.0",
     "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
