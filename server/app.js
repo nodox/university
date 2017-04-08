@@ -8,7 +8,8 @@ const bodyParser = require('body-parser');
 //const pg = require('pg');
 const index = require('./routes/index');
 const users = require('./routes/users');
-const universities = require('./routes/universities');
+const university = require('./routes/university');
+const course = require('./routes/course');
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/universities', universities);
+app.use('/university', university);
+app.use('/course', course);
 
 app.use('*', (req, res) => {
   // Use res.sendfile, as it streams instead of reading the file into memory.
