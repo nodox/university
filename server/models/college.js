@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const University = sequelize.define('University', {
+  const College = sequelize.define('College', {
     name: { 
       type: DataTypes.STRING
     },
@@ -11,15 +11,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
   }, {
-
     classMethods: {
       associate: (models) => {
-        // associations can be defined here
-        // University.hasMany(models.Course);
-        // console.log(models.Course);
 
+        College.hasMany(models.Course, {
+          foreignKey: 'collegeId'
+        }); 
       }
     }
   });
-  return University;
+  return College;
 };

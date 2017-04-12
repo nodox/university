@@ -34,9 +34,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     classMethods: {
       associate: (models) => {
-        // associations can be defined here
-        Course.belongsTo(models.University, {
-          foreignKey: 'universityId'
+
+        // Will add a CourseId attribute to College to hold the primary key value for Course
+        // Will add CollegeId to Course
+        Course.belongsTo(models.College, {
+          foreignKey: 'collegeId'
         });
       }
     }

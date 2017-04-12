@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
   
 });
 
-router.post('/', courseController.create)
+router.post('/', courseController.create);
+router.get('/find', courseController.find);
 
 module.exports = router;

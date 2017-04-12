@@ -1,16 +1,16 @@
-const University = require('../models').University;
+const College = require('../models').College;
 
 module.exports = {
 
   create: (req, res) => {
-    return University
+    return College
       .create({
         name: req.body.name,
         address: req.body.address,
         phoneNumber: req.body.phone,
 
       })
-      .then(university => res.status(201).send(university))
+      .then(college => res.status(201).send(college))
       .catch(error => res.status(400).send(error));
   },
 };
