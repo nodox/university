@@ -14,7 +14,11 @@ module.exports = {
   },
 
   find: (req, res) => {
-    Course.findAll({ where: { collegeId: 1 } }).then((data) => {
+
+    const universityId = req.query.collegeId;
+    console.log(req.query);
+
+    Course.findAll({ where: { collegeId: universityId } }).then((data) => {
       res.status(201).send(data);
     })
     .catch(error => res.status(400).send(error));
