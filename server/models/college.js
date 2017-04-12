@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
       associate: (models) => {
 
         College.hasMany(models.Course, {
-          foreignKey: 'collegeId'
+          foreignKey: 'collegeId',
+          as: 'courses'
         }); 
       }
     }
