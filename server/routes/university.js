@@ -5,9 +5,7 @@ var router = express.Router();
 const universityController = require('../controllers').university;
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-	
-});
+router.get('/', universityController.find)
 
 router.post('/', universityController.create)
 

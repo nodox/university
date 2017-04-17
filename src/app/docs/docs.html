@@ -29,8 +29,25 @@
   </div>
 
   <div class="">
-    <h1>GET /universities </h1>
+    <h1>GET /university </h1>
     <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th ng-repeat="n in docs.university_endpoint.headers">{{ n }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="row in docs.university_endpoint.row">
+          <th>{{ row.param }}</th>
+          <td>{{ row.required }}</td>
+          <td>{{ row.options }}</td>
+          <td>{{ row.type }}</td>
+          <td>{{ row.default_value }}</td>
+          <td>{{ row.desc }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="row"></div>
