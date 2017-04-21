@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 
 //const pg = require('pg');
 const index = require('./routes/index');
-const users = require('./routes/users');
 const university = require('./routes/university');
 const course = require('./routes/course');
 
@@ -26,7 +25,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/university', university);
 app.use('/course', course);
 

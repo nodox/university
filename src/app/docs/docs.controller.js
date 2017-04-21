@@ -4,6 +4,8 @@ export class DocsController {
 
     this.data = [];
     this.$http = $http;
+    this.demoCourseQuery = {};
+    this.demoCollegeQuery = {};
 
     this.course_endpoint = {
       headers: ['Parameter', 'Required', 'Valid Options', 'Type', 'Default Value',  'Description'],
@@ -67,7 +69,7 @@ export class DocsController {
         {
           param: 'time',
           required: 'No',
-          options: 'None',
+          options: 'HH:MM AM/PM',
           type: 'String',
           default_value: 'None',
           desc: 'Time: The time a class is offered'
@@ -75,10 +77,10 @@ export class DocsController {
         {
           param: 'days',
           required: 'No',
-          options: 'None',
+          options: 'MTWRF or -----',
           type: 'String',
           default_value: 'None',
-          desc: 'Days: The days a class is offered'
+          desc: 'Days: The days a class is offered. Use a single letter for day of week.'
         },
         {
           param: 'instructor',
@@ -104,6 +106,32 @@ export class DocsController {
         },
       ]
     };
+
   }
 
+
+  getCourseData() {
+    console.log('Run button method');
+
+    this.$http.get('/course')
+    .then( (res) => {
+      console.log(res.data);
+      this.data = res.data;
+
+    }).catch((err) => {
+      console.log(error);
+    });
+
+  }
+
+  getCollegeData() {
+    this.$http.get('/university')
+    .then( (res) => {
+      console.log(res.data);
+      this.data = res.data;
+
+    }).catch((err) => {
+      console.log(error);
+    });
+  }
 }
