@@ -15,6 +15,7 @@ module.exports = {
   },
   find: (req, res) => {
 
+
     const name = req.query.n;
     College.findAll({ 
       where: { 

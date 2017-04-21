@@ -2,7 +2,7 @@ export class DocsController {
   constructor ($timeout, $http) {
     'ngInject';
 
-    this.data = [];
+    this.collegeData = [];
     this.$http = $http;
     this.demoCourseQuery = {};
     this.demoCollegeQuery = {};
@@ -109,6 +109,9 @@ export class DocsController {
 
   }
 
+  testCode() {
+    alert('Yooo');
+  }
 
   getCourseData() {
     console.log('Run button method');
@@ -125,10 +128,10 @@ export class DocsController {
   }
 
   getCollegeData() {
-    this.$http.get('/university')
+    this.$http.get('/university', {params: this.demoCollegeQuery})
     .then( (res) => {
       console.log(res.data);
-      this.data = res.data;
+      this.collegeData = res.data;
 
     }).catch((err) => {
       console.log(error);

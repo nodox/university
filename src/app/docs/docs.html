@@ -29,6 +29,10 @@
 
     <div>
       <p>Query string: {{}}</p>
+      <form ng-submit="">
+        First Name: <input type="text" ng-model="firstname">
+      </form>
+
 
     </div>
   </div>
@@ -53,6 +57,21 @@
         </tr>
       </tbody>
     </table>
+
+    <div>
+      <p>Query string: {{ docs.demoCollegeQuery }}</p>
+      <form ng-submit="docs.getCollegeData()">
+        <div class="form-group">
+          n: <input type="text" class="" ng-model="docs.demoCollegeQuery.n">
+
+        </div>
+
+
+        <button>Send</button>
+      </form>
+      <p>Results: {{ docs.collegeData }}</p>
+
+    </div>
   </div>
 
   <div class="row"></div>
