@@ -17,12 +17,17 @@ module.exports = {
 
 
     const name = req.query.n;
+
+    const queryOptions = {};
+
+    if (name) {
+      queryOptions.name = {
+        $iLike: '%'+ name +'%'
+      };
+    }
+
     College.findAll({ 
-      where: { 
-        name: {
-          $iLike: '%'+ name +'%'
-        },
-      },
+      where: queryOptions,
     }).then((data) => {
       res.status(201).send(data);
     })
