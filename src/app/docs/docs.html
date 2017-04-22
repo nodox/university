@@ -7,8 +7,47 @@
   </div>
 
   <div class="">
-    <h1>GET /course </h1>
+    <h1>GET /university </h1>
     <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th ng-repeat="n in docs.university_endpoint.headers">{{ n }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="row in docs.university_endpoint.row">
+          <th>{{ row.param }}</th>
+          <td>{{ row.required }}</td>
+          <td>{{ row.options }}</td>
+          <td>{{ row.type }}</td>
+          <td>{{ row.default_value }}</td>
+          <td>{{ row.desc }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <p>Query string: {{ docs.demoCollegeQuery }}</p>
+      <form ng-submit="docs.getCollegeData()">
+        <div class="form-group">
+          n: <input type="text" class="" ng-model="docs.demoCollegeQuery.n">
+
+        </div>
+
+
+        <button>Send</button>
+      </form>
+      <div>
+        <p>Results</p>
+        <textarea class="form-control" rows="10">{{ docs.collegeData }}</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <h1>GET /course </h1>
+    <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints. If you want to find the courses from a specific university, lookup the university ID first using the /university endpoint and use that number for the u parameter.</p>
     <table class="table">
       <thead>
         <tr>
@@ -54,44 +93,6 @@
     </div>
   </div>
 
-  <div class="">
-    <h1>GET /university </h1>
-    <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints.</p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th ng-repeat="n in docs.university_endpoint.headers">{{ n }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="row in docs.university_endpoint.row">
-          <th>{{ row.param }}</th>
-          <td>{{ row.required }}</td>
-          <td>{{ row.options }}</td>
-          <td>{{ row.type }}</td>
-          <td>{{ row.default_value }}</td>
-          <td>{{ row.desc }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div>
-      <p>Query string: {{ docs.demoCollegeQuery }}</p>
-      <form ng-submit="docs.getCollegeData()">
-        <div class="form-group">
-          n: <input type="text" class="" ng-model="docs.demoCollegeQuery.n">
-
-        </div>
-
-
-        <button>Send</button>
-      </form>
-      <div>
-        <p>Results</p>
-        <textarea class="form-control" rows="10">{{ docs.collegeData }}</textarea>
-      </div>
-    </div>
-  </div>
 
   <div class="row"></div>
 
