@@ -28,11 +28,24 @@
     </table>
 
     <div>
-      <p>Query string: {{}}</p>
-      <form ng-submit="">
-        First Name: <input type="text" ng-model="firstname">
-      </form>
+      <p>Query string: {{ docs.demoCourseQuery }}</p>
+      <form ng-submit="docs.getCourseData()">
+        <div class="fomr-group">
+          u: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.u">
+          t: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.t">  
+          c: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.c">  
+          d: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.d">
+          l: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.l">  
+          s: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.s">  
+          cr: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.cr">
+          time: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.time"> 
+          days: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.days"> 
+          instructor: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.instructor"> 
+        </div>
 
+        <button>Send</button>
+      </form>
+      <p>Results: {{ docs.courseData }}</p>
 
     </div>
   </div>

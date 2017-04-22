@@ -3,6 +3,7 @@ export class DocsController {
     'ngInject';
 
     this.collegeData = [];
+    this.courseData = [];
     this.$http = $http;
     this.demoCourseQuery = {};
     this.demoCollegeQuery = {};
@@ -116,10 +117,10 @@ export class DocsController {
   getCourseData() {
     console.log('Run button method');
 
-    this.$http.get('/course')
+    this.$http.get('/course', {params: this.demoCourseQuery})
     .then( (res) => {
-      console.log(res.data);
-      this.data = res.data;
+      // console.log(res.data);
+      this.courseData = res.data;
 
     }).catch((err) => {
       console.log(error);
@@ -130,7 +131,7 @@ export class DocsController {
   getCollegeData() {
     this.$http.get('/university', {params: this.demoCollegeQuery})
     .then( (res) => {
-      console.log(res.data);
+      // console.log(res.data);
       this.collegeData = res.data;
 
     }).catch((err) => {
