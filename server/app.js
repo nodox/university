@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const index = require('./routes/index');
 const university = require('./routes/university');
 const course = require('./routes/course');
-
+const cors = require('cors');
 const app = express();
 
 // view engine setup
@@ -22,6 +22,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use('/', index);
