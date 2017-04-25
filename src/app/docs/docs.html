@@ -5,13 +5,14 @@
     <p class="lead">The open source catalog of university information including course data.</p>
   </div>
 
+
   <div class="">
-    <h1>How to get data</h1>
+    <h1>Get Started</h1>
     <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints. Use the input boxes below to query our database.</p>
   </div>
 
   <div class="">
-    <h1>GET /university </h1>
+    <h3>GET /university </h3>
     <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints.</p>
     <table class="table">
       <thead>
@@ -51,8 +52,8 @@
   </div>
 
   <div class="">
-    <h1>GET /course </h1>
-    <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints. If you want to find the courses from a specific university, lookup the university ID first using the /university endpoint and use that number for the u parameter.</p>
+    <h3>GET /course </h3>
+    <p>The easiest way to get started is to use any client that can make HTTP requests to our endpoints. If you want to find the courses from a specific university, lookup the university ID first using the /university endpoint and use that number for the <strong>u</strong> parameter.</p>
     <table class="table">
       <thead>
         <tr>
@@ -92,13 +93,20 @@
       <div>
         <p>Results</p>
         <textarea class="form-control" rows="10">{{ docs.courseData }}</textarea>
-
       </div>
+      <br>
 
     </div>
   </div>
 
 
-  <div class="row"></div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Demo Applications</h1>
+      <a href="http://tonybumatay.github.io/menu/" style="font-size: 28px;">Wustl Find a course</a>
+    </div>
+  </div>
+  <br>
+
 
 </div>

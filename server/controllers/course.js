@@ -107,7 +107,7 @@ module.exports = {
 
     Course.findAll({ 
       where: queryOptions,
-      // limit: l
+      limit: l
     }).then((data) => {
       res.status(201).send(data);
     })
