@@ -1,5 +1,9 @@
 <div class="container">
 
+  <div class="jumbotron text-center">
+    <h1>University API</h1>
+    <p class="lead">The open source catalog of university information including course data.</p>
+  </div>
 
   <div class="">
     <h1>How to get data</h1>
@@ -31,14 +35,15 @@
       <p>Query string: {{ docs.demoCollegeQuery }}</p>
       <form ng-submit="docs.getCollegeData()">
         <div class="form-group">
-          n: <input type="text" class="" ng-model="docs.demoCollegeQuery.n">
+          n: <input type="text" class="form-control" ng-model="docs.demoCollegeQuery.n">
 
         </div>
 
 
         <button>Send</button>
       </form>
-      <div>
+      <br>
+      <div class="">
         <p>Results</p>
         <textarea class="form-control" rows="10">{{ docs.collegeData }}</textarea>
       </div>
@@ -67,9 +72,8 @@
     </table>
 
     <div>
-      <p>Query string: {{ docs.demoCourseQuery }}</p>
       <form ng-submit="docs.getCourseData()">
-        <div class="fomr-group">
+        <div class="form-group">
           u: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.u">
           t: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.t">  
           c: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.c">  
@@ -81,9 +85,10 @@
           days: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.days"> 
           instructor: <input class="form-control" type="" name="" ng-model="docs.demoCourseQuery.instructor"> 
         </div>
-
+        <p>Query string: {{ docs.demoCourseQuery }}</p>
         <button>Send</button>
       </form>
+      <br>
       <div>
         <p>Results</p>
         <textarea class="form-control" rows="10">{{ docs.courseData }}</textarea>

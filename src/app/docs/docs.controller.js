@@ -70,7 +70,7 @@ export class DocsController {
         {
           param: 'time',
           required: 'No',
-          options: 'HH:MM AM/PM',
+          options: 'HH:MM A/P',
           type: 'String',
           default_value: 'None',
           desc: 'Time: The time a class is offered'
